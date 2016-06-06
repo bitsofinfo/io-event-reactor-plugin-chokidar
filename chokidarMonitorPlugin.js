@@ -9,11 +9,11 @@ class ChokidarMonitorPlugin {
     *
     * An io-event-reactor MonitorPlugin fulfilled by Chokidar: https://github.com/paulmillr/chokidar
     *
-    * @param reactorName - name of the IoReactor this Monitor plugin is bound to
+    * @param reactorId - id of the IoReactor this Monitor plugin is bound to
     * @param logFunction - a function to be used for logging w/ signature function(severity, origin, message)
     * @param errorCallback - a function to be used for relaying any errors w/ signature function(message, sourceErrorObject)
     *
-    * @param ioEventCallback - when a file/dir event occurs, invoke this function(eventType, fullPath, optionalFsStats)
+    * @param ioEventCallback - when a file/dir event occurs, invoke this function(eventType, fullPath, optionalFsStats, optionalExtraInfo)
     *   - where 'eventType' is one of 'add', 'addDir', 'unlink', 'unlinkDir', 'change'
     *   - where 'fullPath' is the full path to the file/dir the event is for
     *   - when available, "optionalFsStats" if not null, should be = https://nodejs.org/api/fs.html#fs_class_fs_stats
@@ -27,7 +27,7 @@ class ChokidarMonitorPlugin {
     *   options - REQUIRED object of chokidar options as defined in the chokidar documentation at: https://github.com/paulmillr/chokidar
     *
     */
-    constructor(reactorName,
+    constructor(reactorId,
                 logFunction,
                 errorCallback,
                 ioEventCallback,
@@ -35,7 +35,7 @@ class ChokidarMonitorPlugin {
                 pluginConfig) {
 
         try {
-            this._reactorName = reactorName;
+            this._reactorId = reactorId;
             this._logFunction = logFunction;
             this._errorCallback = errorCallback;
             this._ioEventCallback = ioEventCallback;
@@ -52,7 +52,7 @@ class ChokidarMonitorPlugin {
             this.watcher.on('error',this._handleError.bind(this));
 
         } catch(e) {
-            var errMsg = this.__proto__.constructor.name +"["+this._reactorName+"] unexpected error: " + e;
+            var errMsg = this.__proto__.constructor.name +"["+this._reactorId+"] unexpected error: " + e;
             this._log('error',errMsg);
             this._onError(errMsg,e);
         }
@@ -65,7 +65,7 @@ class ChokidarMonitorPlugin {
     */
     _log(severity,message) {
         //console.log(severity + ' ' + message);
-        this._logFunction(severity,(this.__proto__.constructor.name + '[' + this._reactorName + ']'),message);
+        this._logFunction(severity,(this.__proto__.constructor.name + '[' + this._reactorId + ']'),message);
     }
 
     /**

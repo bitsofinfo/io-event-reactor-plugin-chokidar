@@ -11,6 +11,7 @@
     },
     "keywords":[
         "io-event-reactor",
+        "chokidar",
         "io",
         "event",
         "monitor",
