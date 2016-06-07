@@ -25,7 +25,9 @@
         "chokidar":"latest"
     },
     "devDependencies":{
-        "mocha":"latest"
+        "mocha":"latest",
+        "temp":"latest",
+        "sleep":"latest"
     },
     "contributors":[
         {
