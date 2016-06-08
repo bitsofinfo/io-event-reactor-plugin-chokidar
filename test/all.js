@@ -94,7 +94,7 @@ function generateConfig(ioEventsReactedTo, evaluatorFunction, tempPathFiles) {
 
 describe('chokidar-monitor-test', function() {
 
-    //temp.track();
+    temp.track();
 
     it('Start a Chokidar monitor, validate that events for monitored files are tracked via monitor -> evaluator -> reactor engine flow', function(done) {
 
