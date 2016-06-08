@@ -7,9 +7,9 @@ var fs = require('fs');
 var assert = require('assert');
 var sleep = require('sleep');
 
-var EvaluatorUtil = require('../../io-event-reactor/ioReactor').EvaluatorUtil;
-var IoEvent = require('../../io-event-reactor-plugin-support').IoEvent;
-var IoReactorService = require('../../io-event-reactor/ioReactorService');
+var EvaluatorUtil = require('io-event-reactor/ioReactor').EvaluatorUtil;
+var IoEvent = require('io-event-reactor-plugin-support').IoEvent;
+var IoReactorService = require('io-event-reactor/ioReactorService');
 
 var logger = function(severity, origin, message) {
     if (severity != 'verbose') {
@@ -41,7 +41,7 @@ function generateConfig(ioEventsReactedTo, evaluatorFunction, tempPathFiles) {
 
                       // Chokidar monitor
                       monitor: {
-                          plugin: "../io-event-reactor-plugin-chokidar",
+                          plugin: "io-event-reactor-plugin-chokidar",
                           config: {
                               paths: [tempPathFiles],
                               options: {

@@ -22,12 +22,14 @@
         "directories"
     ],
     "dependencies":{
-        "chokidar":"latest"
+        "chokidar":"latest",
+        "io-event-reactor-plugin-support":"latest"
     },
     "devDependencies":{
         "mocha":"latest",
         "temp":"latest",
-        "sleep":"latest"
+        "sleep":"latest",
+        "io-event-reactor":"latest"
     },
     "contributors":[
         {
