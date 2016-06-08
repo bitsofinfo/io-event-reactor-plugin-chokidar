@@ -1,6 +1,6 @@
 # io-event-reactor-plugin-chokidar
 
-Chokidar filesystem event monitor plugin for the io-event-reactor module
+[Chokidar](https://github.com/paulmillr/chokidar) filesystem event monitor plugin for the [io-event-reactor](https://github.com/bitsofinfo/io-event-reactor) module
 
 
 ### Unit tests
