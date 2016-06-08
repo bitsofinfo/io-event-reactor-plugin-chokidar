@@ -41,7 +41,7 @@ function generateConfig(ioEventsReactedTo, evaluatorFunction, tempPathFiles) {
 
                       // Chokidar monitor
                       monitor: {
-                          plugin: "io-event-reactor-plugin-chokidar",
+                          plugin: "../../",
                           config: {
                               paths: [tempPathFiles],
                               options: {
