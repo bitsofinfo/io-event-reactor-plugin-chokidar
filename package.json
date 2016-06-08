@@ -1,6 +1,6 @@
 {
     "name":"io-event-reactor-plugin-chokidar",
-    "version":"1.0.0-beta.1",
+    "version":"1.0.0-beta.2",
     "description":"Chokidar filesystem event monitor plugin for the io-event-reactor module",
     "main":"chokidarMonitorPlugin.js",
     "directories":{
