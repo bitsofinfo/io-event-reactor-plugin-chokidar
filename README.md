@@ -31,7 +31,7 @@ var ioReactorServiceConf = {
                   config: {
 
                       // the paths to have chokidar monitor
-                      paths: ['path1/','/path2/x']],
+                      paths: ['path1/','/path2/x', ....],
 
                       // the options below are standard Chokidar options
                       // see: https://github.com/paulmillr/chokidar
