@@ -27,7 +27,10 @@ var ioReactorServiceConf = {
 
               monitor: {
                   plugin: "io-event-reactor-plugin-chokidar",
+
                   config: {
+
+                      // the paths to have chokidar monitor
                       paths: ['path1/','/path2/x']],
 
                       // the options below are standard Chokidar options
