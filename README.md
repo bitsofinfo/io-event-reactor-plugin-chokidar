@@ -1,6 +1,6 @@
 # io-event-reactor-plugin-chokidar
 
-[![Build Status](https://travis-ci.org/bitsofinfo/io-event-reactor-plugin-chokidar.svg?branch=master)](https://travis-ci.org/bitsofinfo/io-event-reactor-plugin-chokidar)
+[![Build Status](https://travis-ci.org/bitsofinfo/io-event-reactor-plugin-chokidar.svg?branch=master)](https://travis-ci.org/bitsofinfo/io-event-reactor-plugin-chokidar) 
 
 [Chokidar](https://github.com/paulmillr/chokidar) filesystem event monitor plugin for the [io-event-reactor](https://github.com/bitsofinfo/io-event-reactor) module
 
