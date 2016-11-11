@@ -98,7 +98,7 @@ describe('chokidar-monitor-test', function() {
 
     it('Start a Chokidar monitor, validate that events for monitored files are tracked via monitor -> evaluator -> reactor engine flow', function(done) {
 
-        this.timeout(15000);
+        this.timeout(25000);
 
         // global array where the code1 reactor will place ioEvents it receives
         var ioEventsReactedTo = [];
@@ -199,7 +199,7 @@ describe('chokidar-monitor-test', function() {
                  }
 
                  done();
-             },10000);
+             },15000);
 
         });
 
