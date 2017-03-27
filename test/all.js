@@ -151,7 +151,7 @@ describe('chokidar-monitor-test', function() {
 
              }
 
-             // changes 3s later for files only
+             // changes 5s later for files only
              setTimeout(function() {
                  for (let tempPath of tempPaths) {
                      if (tempPath.indexOf("File") != -1) {
@@ -162,9 +162,9 @@ describe('chokidar-monitor-test', function() {
                           });
                   }
                 }
-            },3000);
+            },5000);
 
-             // deletes 5s later
+             // deletes 10s later
              setTimeout(function() {
                  for (let tempPath of tempPaths) {
                      if (tempPath.indexOf("File") != -1) {
@@ -181,7 +181,7 @@ describe('chokidar-monitor-test', function() {
                         });
                     }
                 }
-             },5000);
+             },10000);
 
 
              // check that ioEventsReactedTo contains 11 reacted to events...
@@ -200,7 +200,7 @@ describe('chokidar-monitor-test', function() {
                  }
 
                  done();
-             },15000);
+             },50000);
 
         });
 
