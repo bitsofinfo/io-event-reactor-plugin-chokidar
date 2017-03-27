@@ -120,7 +120,7 @@ describe('chokidar-monitor-test', function() {
             var tempPaths = [tempPathRoot + "/ioTestFile1.txt",
                              tempPathRoot + "/ioTestFile2.txt",
                              tempPathRoot + "/ioTestFile3",
-                             tempPathRoot + "/ioTestDir1",
+                             //tempPathRoot + "/ioTestDir1",
                              tempPathRoot + "/ioTestFileA"];
 
              var chokidarConfig = generateConfig(ioEventsReactedTo,
