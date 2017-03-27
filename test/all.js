@@ -74,6 +74,7 @@ function generateConfig(ioEventsReactedTo, evaluatorFunction, tempPathFiles) {
                                 codeFunction: function(ioEvent) {
                                     return new Promise(function(resolve,reject) {
                                         ioEventsReactedTo.push(ioEvent);
+                                        console.log("Reacted to: " . ioEvent);
                                         resolve(true);
                                     });
                                 }
