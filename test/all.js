@@ -99,7 +99,7 @@ describe('chokidar-monitor-test', function() {
 
     it('Start a Chokidar monitor, validate that events for monitored files are tracked via monitor -> evaluator -> reactor engine flow', function(done) {
 
-        this.timeout(80000);
+        this.timeout(90000);
 
         // global array where the code1 reactor will place ioEvents it receives
         var ioEventsReactedTo = [];
@@ -157,6 +157,9 @@ describe('chokidar-monitor-test', function() {
              // changes 5s later for files only
              setTimeout(function() {
                  for (let tempPath of tempPaths) {
+                     var waitTill = new Date(new Date().getTime() + 2 * 1000);
+                     while(waitTill > new Date()){}
+                     
                      if (tempPath.indexOf("File") != -1) {
                           fs.appendFile(tempPath, "testdata-more", null, function(err) {
                               if (err) {
@@ -170,6 +173,9 @@ describe('chokidar-monitor-test', function() {
              // deletes 10s later
              setTimeout(function() {
                  for (let tempPath of tempPaths) {
+                     var waitTill = new Date(new Date().getTime() + 2 * 1000);
+                     while(waitTill > new Date()){} 
+                     
                      if (tempPath.indexOf("File") != -1) {
                          fs.unlink(tempPath, function(err) {
                              if (err) {
