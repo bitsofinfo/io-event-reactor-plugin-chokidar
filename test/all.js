@@ -134,6 +134,9 @@ describe('chokidar-monitor-test', function() {
 
              // trigger adds
              for (let tempPath of tempPaths) {
+                 var waitTill = new Date(new Date().getTime() + 2 * 1000);
+                 while(waitTill > new Date()){}
+                 
                  if (tempPath.indexOf("File") != -1) {
                      fs.writeFile(tempPath, "testdata", function(err) {
                          if (err) {
